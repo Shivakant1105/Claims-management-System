@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    />
+    <title>Claim Management System</title>
+  </head>
+
+  <body>
+    <!--Nav bar-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-green">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav1" href="/memberModule"
+              >Home <span class="sr-only"></span
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav1" (click)="onLogout()" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="navbar-brand justify-content-center" href="/policyData"
+        >Claims Management System</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <!-- nav Bar End -->
+    <!--body-->
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <div class="card" style="box-shadow: 0px 4px 8px 0px #757575">
+          <div class="card-body">
+            <h5 class="card-title text-center">
+              Please provide following details:
+            </h5>
+
+            <h2>Policy Data</h2>
+            <table class="table">
+              <div>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <!-- <th>BenefitId</th>
+                <th>CoverageDetails</th>
+                <th>CapAmountBenefits</th>
+                <th>PolicyNumber</th>
+                <th>PremiumAmount</th>
+                <th>Tenure</th>
+                <th>Terms</th> -->
+
+              </div>
+
+            
+              <div>
+                <tr *ngFor="let policy of policies">
+                  <td>{{ policy.id }}</td>
+                  <td>{{ policy.name }}</td>
+                  <td>{{ policy.description }}</td>
+                  <!-- <td> {{policy.benefitId}} </td>
+                  <td>{{policy.coverageDetails}} </td>
+                  <td>{{policy.capAmountBenefits}} </td>
+                  <td>{{policy.policyNumber}} </td>
+                  <td>{{policy.tenure}} </td>
+                  <td>{{policy.terms}} </td> -->
+
+                  <button (click)="editPolicy(policy)">Edit</button>
+                  <button (click)="deletePolicy(policy)">Delete</button>
+                </tr>
+              </div>
+            </table>
+            <hr />
+
+            <button (click)="addPolicy()">Add Policy</button>
+
+            <div *ngIf="selectedPolicy">
+              <h3>{{ selectedPolicy.id ? "Edit Policy" : "Add Policy" }}</h3>
+              <form style="display: flex; flex-direction: column">
+                <label for="name">Name:</label>
+                <input
+                  placeholder="Enter Policy Name"
+                  type="text"
+                  [(ngModel)]="selectedPolicy.name"
+                  name="name"
+                /><br />
+
+                <label for="description">Description:</label>
+                <textarea
+                  type="text"
+                  [(ngModel)]="selectedPolicy.description"
+                  name="description"
+                ></textarea>
+                <br />
+                <div class="buttonWrapper">
+                  <button (click)="savePolicy()">Save</button>
+                  <button (click)="cancel()">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- body end -->
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    />
+    <title>Claim Management System</title>
+  </head>
+
+  <body>
+    <!--Nav bar-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-green">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav1" href="/memberModule"
+              >Home <span class="sr-only"></span
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav1" (click)="onLogout()" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="navbar-brand justify-content-center" href="/clai"
+        >Claims Management System</a
+      >
+    </nav>
+    <!--Nav bar end-->
+    <!--body-->
+
+    <div class="row">
+      <div class="col-sm-3 ]r"></div>
+      <div class="col-sm-8">
+        <div class="card" style="box-shadow: 0px 4px 8px 0px #757575">
+          <div class="card-body">
+            <h5 class="card-title text-center">Claim I'd Details</h5>
+            <table>
+              <thead>
+                
+
+              
+              </thead>
+              <tbody >
+                <tr >
+                  <th class="test">ClaimId :</th>
+                  <td>{{ claim.claimId }}</td>
+                </tr>
+                <tr>
+                  <th class="test">AmountClaimed :</th>
+                  <td>{{ claim.amountClaimed }}</td>
+                </tr>
+                <tr>
+                  <th class="test">AmountSettled :</th>
+                  <td>{{ claim.amountSettled }}</td>
+                </tr>
+                <tr>
+                  <th class="test">BenefitId :</th>
+                  <td>{{ claim.benefitId }}</td>
+                </tr>
+                <tr>
+                  <th class="test">ClaimType :</th>
+                  <td>{{ claim.claimType }}</td>
+                </tr>
+                <tr>
+                  <th class="test">PemberId :</th>
+                  <td>{{ claim.memberId }}</td>
+                </tr>
+                <tr>
+                  <th class="test">PolicyId :</th>
+                  <td>{{ claim.policyId }}</td>
+                </tr>
+
+                <tr>
+                  <th class="test">ProviderId :</th>
+                  <td>{{ claim.providerId }}</td>
+                </tr>
+
+                <tr>
+                  <th class="test">Description :</th>
+                  <td>{{ claim.description }}</td>
+                </tr>
+
+                <!-- <td>{{ claim?.claimId }}</td>
+                <td>{{ claim?.claimStatus }}</td>
+                <td>{{ claim?.claimId }}</td>
+                <td>{{ claim?.amountClaimed }}</td>
+                <td>{{ claim?.amountSettled }}</td>
+                <td>{{ claim?.benefitId }}</td>
+                <td>{{ claim?.claimType }}</td>
+                <td>{{ claim?.description }}</td>
+                <td>{{ claim?.memberId }}</td>
+                <td>{{ claim?.policyId }}</td>
+                <td>{{ claim?.providerId }}</td> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- body end -->
+  </body>
+</html>

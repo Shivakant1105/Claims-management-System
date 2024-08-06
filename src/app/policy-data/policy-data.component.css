@@ -1,0 +1,88 @@
+.bg-green {
+  color: white;
+  background-color: #157347;
+}
+
+.nav-link:hover {
+  text-decoration: white;
+}
+.nav1 {
+  color: white;
+  text-decoration: none;
+
+  padding-left: 10px;
+}
+
+.nav2 {
+  color: white;
+  text-decoration: none;
+
+  padding-left: 20px;
+}
+
+.nav3 {
+  width: 100%;
+  float: right;
+}
+form {
+  justify-content: center;
+}
+table {
+  text-align: center;
+}
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.fottext {
+  padding-left: 20px;
+}
+#f {
+  color: white;
+}
+button {
+  background-color: #157347;
+  color: white;
+  margin: 5px 10px;
+  min-width: 20%;
+  text-align: center;
+}
+.card {
+  margin-top: 5%;
+  width: 80vw;
+    margin-left: -250px;
+    margin-right: 10px;
+}
+.table{
+    display: flex;
+     flex-direction: column
+}
+.btn2 {
+  margin-left: 70%;
+
+  padding: 5px 10px 5px 10px;
+}
+.btn3 {
+  margin-left: 15%;
+  padding: 5px 17px 5px 10px;
+}
+button:hover {
+  color: white;
+}
+th {
+  text-indent: 1rem;
+  gap: 10px;
+  display: -ms-inline-flexbox;
+}
+td {
+  text-indent: 1rem;
+}
+
+.clr1 {
+  background-color: #157347;
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: space-evenly;
+}

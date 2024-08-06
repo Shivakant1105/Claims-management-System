@@ -1,0 +1,90 @@
+.bg-green {
+  color: white;
+  background-color: #198553;
+}
+
+.nav-link:hover {
+  text-decoration: white;
+}
+.nav1 {
+  color: white;
+  text-decoration: none;
+
+  padding-left: 10px;
+}
+
+.nav2 {
+  color: white;
+  text-decoration: none;
+
+  padding-left: 20px;
+}
+
+.nav3 {
+  width: 100%;
+  float: right;
+}
+
+table {
+  text-align: center;
+  margin-top: 0%;
+  margin: 0 auto;
+}
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+.fottext {
+  padding-left: 20px;
+}
+li{
+    text-align: justify;
+}
+th{margin: 0 auto;
+    grid-area: auto;
+}
+tbody{
+  margin: 0 auto;
+}
+#f {
+  color: white;
+}
+button {
+  background-color: #198553;
+  color: white;
+
+  min-width: 20%;
+  text-align: center;
+}
+.card {
+  margin-top: 10%;
+  margin-left: 0 auto;
+}
+.btn2 {
+  margin-left: 70%;
+
+  padding: 5px 10px 5px 10px;
+}
+.test{
+
+  width: 200px;
+    display: flex;
+  align-items: flex-start;
+  
+}
+.btn3 {
+  margin-left: 15%;
+  padding: 5px 17px 5px 10px;
+}
+button:hover {
+  color: white;
+}
+
+.clr1 {
+  background-color: #198553;
+}
+
+.card-body{
+  margin-right: auto;
+}

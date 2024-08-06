@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    />
+    <title>Claim Management System</title>
+  </head>
+
+  <body>
+    <!--Nav bar-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-green">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav1" href="/userSignup"
+              >Home <span class="sr-only"></span
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav1" (click)="" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="navbar-brand justify-content-center" href="/userSignup"
+        >Claims Management System</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <div
+      class="container-fluid bg-white px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto"
+    >
+      <div class="card card0 border-0">
+        <div class="row heading d-flex justify-content-center">
+          Claims Management System
+        </div>
+        <div class="row d-flex mt-3">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-6">
+            <div>
+              <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                <div>
+                  <label for="firstName">First Name</label>
+                  <input
+                    type="text"
+                    formControlName="firstName"
+                    placeholder="Enter Your First Name"
+                  />
+                </div>
+
+                <div>
+                  <label for="lastName">Last Name</label>
+                  <input
+                    type="text"
+                    formControlName="lastName"
+                    placeholder="Enter Your Last Name"
+                  />
+                </div>
+
+                <div>
+                  <label for="email">Email </label>
+                  <input
+                    type="email"
+                    formControlName="email"
+                    placeholder="Enter Your Valid Email Id"
+                  />
+                </div>
+
+                <div>
+                  <label for="password">Password</label>
+
+                  <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter 6 character Minimum"
+                  />
+                  <!-- <button type="button" (click)="showPassword = !showPassword">{{ showPassword ? 'Hide' : 'Show' }}</button> 
+  formControlName="password" [type]="showPassword ? 'text' : 'password'" (mouseenter)="showPassword = true" (mouseleave)="showPassword = false"-->
+                </div>
+
+                <div>
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input
+                    type="password"
+                    formControlName="confirmPassword"
+                    placeholder="Enter 6 character Minimum "
+                  />
+                </div>
+
+                <button type="submit" [disabled]="signupForm.invalid">
+                  Sign Up
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
